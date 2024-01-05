@@ -27,3 +27,15 @@ Certificate:
 ```
 $ openssl req -key server.key -new -x509 -days 365 -out server.crt
 ```
+
+## How-to: complie and use
+
+```
+$ g++ server.cc -o server -lssl -lcrypto
+$ g++ client.cc -o client -lssl -lcrypto
+```
+Usage:
+```
+$ ./server <port>
+$ ./client <server ip> <server port>
+```
